@@ -5,10 +5,10 @@
     <title>じゃんけん</title>
 </head>
 <body>
-    <form action="/janken">
-        <input type="text" name="hand" required>
+    <form action="/janken"> <!--サーバ側のurl-->
+        <input type="text" name="hand" required> <!--requiredは必須-->
         <label for="hand">何を出す？</label>
-        <input type="submit" values="じゃんけん　ポン">
+        <input type="submit" values="じゃんけん　ポン"> <!--submitは送信ボタン-->
         <input type="hidden" name="win" value="0">
         <input type="hidden" name="total" value="0">
     </form>
