@@ -45,6 +45,8 @@ app.get("/janken2", (req, res) => {
   const num = Math.floor( Math.random() * 3 + 1 );
   let cpu = '';
   let judgement = '';
+  //yourの宣言を追加
+  let your = '';
   if( num==1 ) cpu = 'グー';
   else if( num==2 ) cpu = 'チョキ';
   else if (num==3) cpu = 'パー';
