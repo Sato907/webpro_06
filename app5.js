@@ -28,6 +28,31 @@ app.get("/keiyo_add", (req, res) => {
 
 });
 
+let band = [
+  { id:1, code:"001", name:"Craftone"},
+  { id:2, code:"002", name:"雨上がり"},
+  { id:3, code:"003", name:"solfea"},
+  { id:4, code:"004", name:"waon"},
+  { id:5, code:"005", name:"こもれび"},
+  { id:6, code:"006", name:"しくす"},
+];
+
+app.get("/band_add", (req, res) => {
+  let id = req.query.id;
+  let code = req.query.code;
+  let name = req.query.name;
+  let newdata = { id: id, code: code, name: name };
+  station.push( newdata );
+  res.render('db3', { data: band });
+
+});
+
+
+
+
+
+
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";
