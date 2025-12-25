@@ -21,12 +21,12 @@ app.get("/keiyo2", (req, res) => {
   res.render('keiyo2', {data: station2} );
 });
 
-// Create
+// Create 新規登録
 app.get("/keiyo2/create", (req, res) => {
   res.redirect('/public/keiyo2_new.html');
 });
 
-// Read
+// Read　詳細表示
 app.get("/keiyo2/:number", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const number = req.params.number;
@@ -34,7 +34,7 @@ app.get("/keiyo2/:number", (req, res) => {
   res.render('keiyo2_detail', {id: number, data: detail} );
 });
 
-// Delete
+// Delete　削除
 app.get("/keiyo2/delete/:number", (req, res) => {
   // 本来は削除の確認ページを表示する
   // 本来は削除する番号が存在するか厳重にチェックする
@@ -43,7 +43,7 @@ app.get("/keiyo2/delete/:number", (req, res) => {
   res.redirect('/keiyo2' );
 });
 
-// Create
+// Create　
 app.post("/keiyo2", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const id = station2.length + 1;
@@ -57,7 +57,7 @@ app.post("/keiyo2", (req, res) => {
   res.render('keiyo2', {data: station2} );
 });
 
-// Edit
+// Edit　編集
 app.get("/keiyo2/edit/:number", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const number = req.params.number;
@@ -65,7 +65,7 @@ app.get("/keiyo2/edit/:number", (req, res) => {
   res.render('keiyo2_edit', {id: number, data: detail} );
 });
 
-// Update
+// Update 更新
 app.post("/keiyo2/update/:number", (req, res) => {
   // 本来は変更する番号が存在するか，各項目が正しいか厳重にチェックする
   // 本来ならここにDBとのやり取りが入る

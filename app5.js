@@ -4,6 +4,8 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use("/public", express.static(__dirname + "/public"));
+app.use(express.urlencoded({ extended: true }));
+
 
 let station = [
   { id:1, code:"JE01", name:"東京駅"},
@@ -24,7 +26,7 @@ let station2 = [
   { id:7, code:"JE18", name:"蘇我駅", change:"内房線，外房線", passengers:31328, distance:43.0 },
 ];
 
-// 期末_test
+// 期末課題
 
 let end = [
   {char:"苗木誠", title:"超高校級の幸運",birth:"１月1日",cast:"緒方恵美",end:"生還"}
@@ -73,6 +75,9 @@ app.get("/keiyo2/:number", (req, res) => {
   res.render('keiyo2_detail', {data: detail} );
 });
 
+
+// 課題
+
 let band = [
   { id:1, code:"001", name:"Craftone"},
   { id:2, code:"002", name:"雨上がり"},
@@ -93,7 +98,7 @@ app.get("/band_add", (req, res) => {
 
 });
 
-
+// 
 
 
 

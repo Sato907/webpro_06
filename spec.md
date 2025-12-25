@@ -90,14 +90,16 @@ other | 文字列 | 間違い探しの解答
 
 ページの遷移の仕方に関しては登場人物の名前やエンディングの名前をクリックする方式を採用する．また，ページ遷移案を下記のフローチャートに示す．本システムで紹介する作品は、マルチエンディングと呼ばれる種類であり，またプレイヤーによる選択により異なる会話やアイテムを取得できる．そのため，分岐する場所がわかるよう，ストーリー一覧では時系列順に出力されるようにし，分岐する箇所をクリックすることにより分岐ルート詳細へとページが遷移する．
 
+・ニーチェ
+
 機能 | メソッド | リソース名  
 -|-|-
-一覧 | get | /dangan
-詳細表示 | get　| /dangan/:number
-新規登録 | get |　/dangan/create
-削除 | get | /dangan/delete/:number
-編集 | get  | /dangan/edit/:number
-更新 | get | /dangan/update/:number
+一覧 | get | /manga
+詳細表示 | get　| /manga/:number
+新規登録 | get |　/manga/create 
+削除 | get | /manga/delete/:number
+編集 | get  | /manga/edit/:number
+更新 | get | /manga/update/:number
 
 
 
