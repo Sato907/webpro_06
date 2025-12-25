@@ -6,6 +6,7 @@
 ・リソースごとの機能の詳細 -->
 
 # 開発者用仕様書(仮)
+更新がされないめう
 
 本開発者用仕様書では，提供する3つのシステムに関するデータ構造，ページ遷移ならびにリソースごとの機能について説明を行う．
 
@@ -99,8 +100,8 @@ other | 文字列 | 間違い探しの解答
 新規登録 | get |　/manga/create 
 削除 | get | /manga/delete/:number
 編集 | get  | /manga/edit/:number
-更新 | get | /manga/update/:number
-
+更新 | post | /manga/update/:number
+　
 
 
 ```mermaid
