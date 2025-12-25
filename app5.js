@@ -24,6 +24,27 @@ let station2 = [
   { id:7, code:"JE18", name:"蘇我駅", change:"内房線，外房線", passengers:31328, distance:43.0 },
 ];
 
+// 期末_test
+
+let end = [
+  {char:"苗木誠", title:"超高校級の幸運",birth:"１月1日",cast:"緒方恵美",end:"生還"}
+];
+
+app.get("/dangan", (req, res) => {
+  // 本来ならここにDBとのやり取りが入る
+  res.render('dangan', {data: end} );
+});
+
+app.get("/dangan/:number", (req, res) => {
+  // 本来ならここにDBとのやり取りが入る
+  const number = req.params.number;
+  const detail = dangan[ number ];
+  res.render('keiyo2_detail', {data: detail} );
+});
+
+// 　ここまで
+
+
 app.get("/keiyo", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   res.render('db2', { data: station });
